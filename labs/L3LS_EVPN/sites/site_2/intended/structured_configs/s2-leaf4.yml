@@ -6,7 +6,9 @@ aaa_root:
 banners:
   motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
 
-    EOF'
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -88,6 +90,15 @@ local_users:
   sha512_password: $6$arista$OUTSXnxJxFbCSZXTVMoomUZGSva65xFsYw9/lHnkBv/1aU06C0NYoyff0nY3dRtCM6wbYcEax9Fy103ezl2iH1
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3Xua19T2czFkCs2Tev6QurpbS2PFCgTAsv/teDyePpbyz2UDWZnRL1tZVey78/qXz3j/rukSbv7szJxAkshDsj05/jF5IDVLvId08LiNBS9cpNOQTKVvFSNXJnYq89nblEwaYwLbG2STAiF18Mq1sT6mBsmCJ4SJg7K0dTBdItAhGAYZ3W59lx972bRUyc/430Pbjaa3M20497dXYuQkFiCG+FcHhymsMQ9+sNnDLoN/5rnSdzPIG073GkQ8lmU3svR0TE0dhVx50FjbCnoiAWIoh+Ql1lRgQ925iDWS1pxZZtl4HGkOrXdh7xRYSJkn4BFZU79NGBHc1POTzv8xd
     arista@ibm-cloud-ws-16-d01ee26a-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
